@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-control" content="no-cache,no-store,must-revalidate" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blockheads</title>
+    <link rel="icon" href="images/ico.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.bundle.min.js"></script>
+    <script>const ctr=(t,e)=>$("<tr>").append(t.map(t=>Number.isInteger(t)?$("<td>").append(e[t][1].startsWith("https://")&&$("<a>",{class:"btn btn-"+("P)"===e[t][0].slice(-2)?"danger":"T)"===e[t][0].slice(-2)?"primary":"warning"),text:e[t][0],href:e[t][1]})):"string"==typeof t?$("<td>",{text:t}):$("<th>",{text:t[0],scope:t[1]}))),ctb=({caption:t,head:e,body:a},n)=>$("<table>",{class:`table table-md ${t&&"table-bordered caption-top"}`}).append(t&&$("<caption>").html("<strong>Time Table</strong><br>"+t),$("<thead>",{class:"table-light",style:"border-bottom: 0"}).append(ctr(Object.values(e),n)),$("<tbody>").append(Object.values(a).map(t=>ctr(t,n)))),init=({material:t,links:e,maintable:a,bottomtable:n})=>{const o=$("<div>",{class:"btn-group"}).append($("<button>",{type:"button",id:"dropdownMenuButton",class:"btn btn-primary dropdown-toggle",text:"Material","aria-expanded":"false","data-bs-toggle":"dropdown"}));$("<ul>",{"aria-labelledby":"dropdownMenuButton",class:"dropdown-menu"}).appendTo(o).append(Object.keys(t).map(e=>$("<a>",{text:e,href:t[e],class:"dropdown-item"}).appendTo($("<li>")))),$("<div>").append(ctb(a,e)).append(ctb(n,e)).appendTo($("<div>",{class:"container"}).append(o).appendTo($("body"))),setTimeout(()=>{const t=(new Date).getDay()-1,o=+((new Date).getMinutes()>50)+(new Date).getHours()-7;t>=0&&t<5&&o>0&&o<12&&6!==o&&confirm(`Open: ${n.body[a.body[t][o]-1][2]}`)&&(location.href=e[a.body[t][o]][1])},500)};</script>
+    <script type="text/javascript">
+      const data = {
+        material: {
+          "3rd Semester": "https://drive.google.com/drive/folders/1G78Ua7FU5xMT7Y27MiVhpO32soVIV3ii?usp=sharing",
+          "4th Semester": "https://drive.google.com/drive/folders/1woZf6GQ0M6xfMcEMJb0eRVfAhIf68SP2?usp=sharing",
+          "5th Semester": "https://drive.google.com/drive/folders/1GLCaFCtcpVaSRoDTocit9XoShW1BQC6T?usp=sharing",
+          "6th Semester": "https://drive.google.com/drive/folders/1lGtOrvVgFabN_OVZLgp0HrOOCSPU9TmJ?usp=sharing",
+          Private:        "https://drive.google.com/drive/folders/1TjxQsx7k7HhWigSc81Pxe37MN9DYiS3x?usp=sharing",
+        },
+        links: [
+          ["",            ""],
+          ["DSS:SrKP",    "https://us06web.zoom.us/j/6937666146?pwd=R1A4bWlRdjVMbkt2eDh5elgyRVhZZz09"],
+          ["WRE:SSPL",    "https://meet.google.com/jxg-gbri-omk"],
+          ["SDL:SrKP(P)", "https://us06web.zoom.us/j/6937666146?pwd=R1A4bWlRdjVMbkt2eDh5elgyRVhZZz09"],
+          ["WREL:KCh(P)", "https://meet.google.com/utc-eyzq-kda"],
+          ["OR:SDM",      "https://us06web.zoom.us/j/86362552981?pwd=TGIvV0Rab0NINVpPWGJJZUV6V0VoZz09"],
+          ["SRS:LN",      "https://meet.google.com/uwk-njwn-vfe"],
+          ["DMT:SMYK",    "https://us06web.zoom.us/j/81120492336?pwd=S2VyUEM2WXRUMkQ4ajdBbm0xaWtZZz09"],
+          ["CFD:SSen",    "https://meet.google.com/jfk-anrw-rph"],
+          ["TCS:DiC",     "https://meet.google.com/tei-tuwe-qeb"],
+          ["GMY:MKM",     "https://meet.google.com/gam-ijtd-fmx"],
+        ],
+        maintable: {
+          caption: "Department of Civil Engineering, Winter(2021-22)",
+          head: [["TIME", "col"], ["8:00-8:50 AM", "col"], ["9:00-9:50 AM", "col"], ["10:00-10:50 AM", "col"], ["11:00-11:50 AM", "col"], ["12:00-12:50 PM", "col"], ["", "col"], ["2:00-2:50 PM", "col"], ["3:00-3:50 PM", "col"], ["4:00-4:50 PM", "col"], ["5:00-5:50 PM", "col"], ["6:00-6:50 PM", "col"]],
+          body: [
+            [["Monday", "row"],     0,  0,  1,  0,  7, ["L", ""],  0,  9,  6,  0,  2],
+            [["Tuesday", "row"],    0,  0,  3,  3,  0, ["U", ""],  5,  0,  8,  0, 10],
+            [["Wednesday", "row"],  0,  0,  0,  1,  7, ["N", ""],  0,  6,  8, 10,  2],
+            [["Thursday", "row"],   0,  0,  4,  4,  0, ["C", ""],  5,  9,  6,  0,  0],
+            [["Friday", "row"],     0,  0,  0,  1,  7, ["H", ""],  0,  5,  8,  0,  2],
+          ],
+        },
+        bottomtable: {
+          head: [["S.No.", "col"], ["Sub. Abbrev.", "col"], ["Subject", "col"], ["Subject Code", "col"]],
+          body: [
+            [["1",  "row"], "DSS",  "Design of Steel Structures",             "CEC305"],
+            [["2",  "row"], "WRE",  "Water Resources Engineering",            "CEC306"],
+            [["3",  "row"], "SDL",  "Structural Detailing Laboratory",        "CEC307"],
+            [["4",  "row"], "WREL", "Water Resources Engineering Laboratory", "CEC308"],
+            [["5",  "row"], "OR",   "Operations Research",                    "MSO301"],
+            [["6",  "row"], "SRS",  "Slope and Retaining Structures",         "CED532"],
+            [["7",  "row"], "DMT",  "Discrete Mathematics",                   "MCO501"],
+            [["8",  "row"], "CFD",  "Computational Fluid Dynamics",           "MEO579"],
+            [["9",  "row"], "TCS",  "Technology, Culture and Society",        "HSO503"],
+            [["10", "row"], "GMY",  "Geomorphology",                          "GLD540"],
+          ],
+        },
+      };
+    </script>
+  </head>
+  <body onload="init(data)"></body>
+</html>
